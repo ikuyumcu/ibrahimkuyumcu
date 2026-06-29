@@ -165,48 +165,14 @@
     .article h3{font-size:22px}
   }
 
-
-  /* Stok Sağlık demo rapor kartı */
-  .report-card{border-color:color-mix(in srgb,var(--gold) 38%,var(--line));}
-  .report-card .report-intro{margin-bottom:18px}
-  .report-highlights{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:18px 0}
-  .report-highlight{border:1px solid var(--line-soft);background:rgba(7,22,43,.35);border-radius:10px;padding:13px}
-  .report-highlight .rk{font-family:var(--mono);font-size:10px;color:var(--muted);letter-spacing:.07em;text-transform:uppercase}
-  .report-highlight .rv{font-family:var(--serif);font-size:22px;color:var(--text);font-weight:600;margin-top:6px;line-height:1.05}
-  .pdf-embed{margin-top:18px;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#0a1830}
-  .pdf-embed iframe{display:block;width:100%;height:560px;border:0;background:#fff}
-  .report-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:16px}
-  .report-note{font-size:12.5px;color:var(--muted);margin-top:10px}
-  @media(max-width:860px){
-    .report-highlights{grid-template-columns:repeat(2,1fr)}
-    .pdf-embed iframe{height:500px}
-  }
-  @media(max-width:560px){
-    .report-highlights{grid-template-columns:1fr}
-    .pdf-embed iframe{height:430px}
-    .report-actions{display:grid;grid-template-columns:1fr}
-  }
-
-
-
-  /* Belgeler & Sertifikalar bölümü */
-  .cert-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:20px}
-  .cert-card{border:1px solid var(--line);background:linear-gradient(180deg,var(--panel),var(--bg-soft));border-radius:14px;padding:22px;display:flex;flex-direction:column;min-height:190px}
-  .cert-card .cert-type{font-family:var(--mono);font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
-  .cert-card h3{font-family:var(--serif);font-size:21px;color:var(--text);line-height:1.2;margin-bottom:10px;font-weight:600}
-  .cert-card p{font-size:14px;color:var(--body);margin-bottom:14px}
-  .cert-meta{display:flex;flex-wrap:wrap;gap:7px;margin-top:auto}
-  .cert-viewer{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#0a1830;margin-top:18px}
-  .cert-viewer iframe{display:block;width:100%;height:650px;border:0;background:#fff}
-  .cert-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:16px}
-  .cert-note{font-size:12.5px;color:var(--muted);margin-top:10px}
-  @media(max-width:860px){.cert-grid{grid-template-columns:1fr}.cert-viewer iframe{height:520px}}
-  @media(max-width:560px){.cert-viewer iframe{height:440px}.cert-actions{display:grid;grid-template-columns:1fr}.cert-card{min-height:auto}}
-
+  .report-demo{margin-top:26px;border:1px solid var(--line);background:linear-gradient(180deg,rgba(16,40,77,.72),rgba(7,22,43,.42));border-radius:18px;padding:28px;box-shadow:0 24px 70px -50px rgba(0,0,0,.55)}
+  .report-demo h4{font-family:var(--serif);font-size:24px;color:var(--text);font-weight:600;margin-bottom:8px}.report-demo p{font-size:14.5px;color:var(--body);max-width:74ch;margin-bottom:16px}.report-highlights{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:18px 0 24px}.report-highlight{border:1px solid var(--line-soft);background:rgba(8,26,51,.58);border-radius:12px;padding:14px}.report-highlight .rk{font-family:var(--mono);font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}.report-highlight .rv{font-family:var(--serif);font-size:25px;color:var(--sky);font-weight:600;margin-top:8px;line-height:1}.pdf-embed,.cert-viewer{border:1px solid var(--line);background:#f6f7f9;border-radius:14px;overflow:hidden;min-height:620px}.pdf-embed iframe,.cert-viewer iframe{width:100%;height:620px;border:0;display:block;background:#fff}.report-actions,.cert-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}.report-note,.cert-note{font-size:12.5px!important;color:var(--muted)!important;margin-top:12px!important}.cert-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:24px 0}.cert-card{border:1px solid var(--line);background:var(--panel);border-radius:14px;padding:22px}.cert-card h3{font-family:var(--serif);font-size:20px;color:var(--text);font-weight:600;margin-bottom:8px}.cert-card p{font-size:14px;color:var(--body);margin-bottom:12px}.cert-meta{display:flex;gap:7px;flex-wrap:wrap}
+  @media(max-width:860px){.report-highlights,.cert-grid{grid-template-columns:1fr 1fr}.pdf-embed,.cert-viewer{min-height:520px}.pdf-embed iframe,.cert-viewer iframe{height:520px}}
+  @media(max-width:560px){.report-demo{padding:20px}.report-highlights,.cert-grid{grid-template-columns:1fr}.pdf-embed,.cert-viewer{min-height:420px}.pdf-embed iframe,.cert-viewer iframe{height:420px}}
 </style>
 </head>
 <body>
-<nav><div class="wrap nav-inner"><a href="#top" class="brand"><span class="mono-mark">İK</span><span class="nm">İbrahim Kuyumcu</span></a><button class="nav-toggle" id="navToggle">Menü</button><div class="nav-links" id="navLinks"><a href="#about" data-i18n="nav_about">Hakkımda</a><a href="#work" data-i18n="nav_work">Çalışmalar</a><a href="#writing" data-i18n="nav_writing">Yazılar</a><a href="#principles" data-i18n="nav_principles">Yaklaşım</a><a href="#certificates">Belgeler</a><a href="#expertise" data-i18n="nav_expertise">Uzmanlık</a><a href="#contact" data-i18n="nav_contact">İletişim</a><button class="lang" id="langBtn">EN</button></div></div></nav>
+<nav><div class="wrap nav-inner"><a href="#top" class="brand"><span class="mono-mark">İK</span><span class="nm">İbrahim Kuyumcu</span></a><button class="nav-toggle" id="navToggle">Menü</button><div class="nav-links" id="navLinks"><a href="#about" data-i18n="nav_about">Hakkımda</a><a href="#work" data-i18n="nav_work">Çalışmalar</a><a href="#writing" data-i18n="nav_writing">Yazılar</a><a href="#principles" data-i18n="nav_principles">Yaklaşım</a><a href="#certificates" data-i18n="nav_certificates">Belgeler</a><a href="#expertise" data-i18n="nav_expertise">Uzmanlık</a><a href="#contact" data-i18n="nav_contact">İletişim</a><button class="lang" id="langBtn">EN</button></div></div></nav>
 <header class="hero" id="top"><div class="wrap"><div class="hero-grid"><div class="hero-copy"><div class="status"><span class="dot"></span><span data-i18n="status">Seçici veri analitiği projelerine ve akademik iş birliklerine açık</span></div><h1 data-i18n="hero_name">İbrahim Kuyumcu</h1><div class="role" data-i18n="hero_role">Veri Bilimci & Analitik Ürün Geliştirici</div><p class="lede" data-i18n="hero_lede">On yıllık sektör tecrübesini veri biliminin akademik titizliğiyle birleştiren bir veri bilimci ve analitik ürün geliştiricisiyim. Makine öğrenmesi ve istatistiksel modellerle ham işletme verisini; stok optimizasyonu, talep tahmini, müşteri analitiği ve operasyonel verimlilik sağlayan karar destek sistemlerine dönüştürüyorum.</p><div class="cta-row"><a href="#work" class="btn btn-primary" data-i18n="hero_cta1">Çalışmaları incele</a><a href="#contact" class="btn btn-ghost" data-i18n="hero_cta2">İletişime geç</a><a href="#academic" class="btn btn-ghost" data-i18n="hero_cta3">Akademik çalışmaları gör</a></div></div>
 <div class="dash reveal" aria-label="Örnek yönetici paneli"><div class="dash-top"><div><span class="dash-badge" data-i18n="panel_badge">ÖRNEK · DEMO PANEL</span><div class="dash-label" data-i18n="panel_label">Gerçekçi örnek yönetici ekranı</div><div class="dash-title" data-i18n="panel_title">Dağıtım Şirketi Karar Paneli</div><div class="dash-sub" data-i18n="panel_sub">Stok, satış, kâr ve müşteri riskleri aynı ekranda okunabilir hale gelir.</div></div><div class="dash-chip">Logo ERP · SQL · Python</div></div><div class="kpi-grid"><div class="kpi warn"><div class="k" data-i18n="panel_kpi1">Ölü stok riski</div><div class="v">128</div><div class="s">aksiyon bekleyen SKU</div></div><div class="kpi"><div class="k" data-i18n="panel_kpi2">Stokta bağlı nakit</div><div class="v">₺4.8M</div><div class="s">kampanya/iade adayı</div></div><div class="kpi"><div class="k" data-i18n="panel_kpi3">90 günlük talep</div><div class="v">+12%</div><div class="s">kategori tahmini</div></div><div class="kpi warn"><div class="k" data-i18n="panel_kpi4">Churn alarmı</div><div class="v">37</div><div class="s">öncelikli müşteri</div></div></div><div class="bars"><div class="barrow"><span data-i18n="panel_row1">Yavaş dönen ürünler</span><div class="bar"><div class="fill red" style="width:78%"></div></div><span>78%</span></div><div class="barrow"><span data-i18n="panel_row2">Negatif marj uyarıları</span><div class="bar"><div class="fill" style="width:42%"></div></div><span>42%</span></div><div class="barrow"><span data-i18n="panel_row3">Satın alma önerisi</span><div class="bar"><div class="fill green" style="width:64%"></div></div><span>64%</span></div><div class="barrow"><span data-i18n="panel_row4">Riskli müşteri listesi</span><div class="bar"><div class="fill" style="width:56%"></div></div><span>56%</span></div></div><div class="dash-actions"><div class="action"><b>Aksiyon</b>İndirim / iade / alım durdurma</div><div class="action"><b>Çıktı</b>Nakit, marj ve stok dengesi</div></div></div></div>
 <div class="stats reveal"><div class="stat"><div class="v">10</div><div class="l" data-i18n="stat1">Yıl sektör & iş tecrübesi</div></div><div class="stat"><div class="v">12+</div><div class="l" data-i18n="stat2">Uçtan uca veri bilimi projesi</div></div><div class="stat"><div class="v">3</div><div class="l" data-i18n="stat3">Yayımlanan Medium makalesi</div></div><div class="stat"><div class="v">2022–26</div><div class="l" data-i18n="stat4">Gerçek ERP işlem verisi</div></div></div></div></header>
@@ -214,91 +180,46 @@
 <section id="about"><div class="wrap"><div class="about-grid"><div><div class="sec-head" style="margin-bottom:26px"><span class="eyebrow" data-i18n="eb_about">Hakkımda</span><h2 class="sec-title reveal" data-i18n="about_title">Saha deneyiminden akademik veri analitiğine</h2></div><div class="reveal"><p data-i18n="about_p1">2016’dan bu yana ticaret, operasyon ve dağıtım tarafında edindiğim saha deneyimini veri bilimiyle birleştiriyorum. Satış, stok, cari hesap, tahsilat, ürün kârlılığı ve müşteri davranışı gibi verilerin işletme kararlarını nasıl etkilediğini yalnızca teorik olarak değil, doğrudan işin içinde deneyimledim.</p><p data-i18n="about_p2">İbn Haldun Üniversitesi’nde Büyük Veri ve İş Analitiği yüksek lisansı yapıyorum. Akademik tarafta istatistiksel modelleme, makine öğrenmesi, panel veri ekonometrisi, zaman serisi tahmini ve müşteri analitiği üzerine çalışıyor; bu yöntemleri gerçek işletme problemleriyle ilişkilendiriyorum.</p><p data-i18n="about_p3">Benim odağım geçmiş performansı yalnızca raporlamak değil; satış, stok, müşteri ve nakit akışının gelecekte nasıl davranabileceğini öngören, açıklanabilir ve uygulanabilir karar destek sistemleri kurmak. Bu nedenle çalışmalarımda hem iş etkisini hem de akademik meşruiyeti birlikte korumaya önem veriyorum.</p></div></div><div class="facts reveal"><div class="fact"><div class="k" data-i18n="f1k">Yüksek Lisans</div><div class="val" data-i18n="f1v">Büyük Veri & İş Analitiği</div></div><div class="fact"><div class="k" data-i18n="f2k">Üniversite</div><div class="val" data-i18n="f2v">İbn Haldun Üniversitesi</div></div><div class="fact"><div class="k" data-i18n="f3k">Lisans</div><div class="val" data-i18n="f3v">İstanbul Ü. — Halkla İlişkiler</div></div><div class="fact"><div class="k" data-i18n="f4k">Veri Analiz Okulu</div><div class="val" data-i18n="f4v">Hesaplamalı Sosyal Bilimler & Yapay Zekâ (YÖK)</div></div><div class="fact"><div class="k" data-i18n="f5k">Odak Alanı</div><div class="val" data-i18n="f5v">FMCG, Stok, Tahminleme, Müşteri Analitiği</div></div><div class="fact"><div class="k" data-i18n="f6k">Konum</div><div class="val" data-i18n="f6v">İstanbul, Türkiye</div></div></div></div></div></section>
 <section id="focus"><div class="wrap"><div class="sec-head"><span class="eyebrow" data-i18n="eb_focus">Odak</span><h2 class="sec-title reveal" data-i18n="focus_title">Firmaların geleceğini daha erken görmesini sağlayan sistemler kuruyorum</h2><p class="sec-sub reveal" data-i18n="focus_sub">Benim için veri analitiği yalnızca geçmişi raporlamak değildir. Asıl değer; satışın, stokun, müşterinin ve nakdin gelecekte nasıl davranacağını öngörüp bugünkü kararı daha doğru almaktır.</p></div><div class="focus-grid reveal"><div class="focus"><div class="n">01</div><h3 data-i18n="fo1t">Stoktaki nakdi görünür kılmak</h3><p data-i18n="fo1d">Hangi ürünün para kazandırdığını, hangisinin depoda nakit kilitlediğini ve hangi ürünün kampanya/indirim/iade kararı gerektirdiğini ortaya çıkarırım.</p></div><div class="focus"><div class="n">02</div><h3 data-i18n="fo2t">Talebi ve riski tahmin etmek</h3><p data-i18n="fo2d">Satış geçmişinden, mevsimsellikten ve ürün davranışından yola çıkarak satın alma ve stok kararlarını sezgiden veriye taşırım.</p></div><div class="focus"><div class="n">03</div><h3 data-i18n="fo3t">Müşteriyi kaybetmeden önce görmek</h3><p data-i18n="fo3d">Churn, kohort ve RFM analizleriyle hangi müşterinin uzaklaştığını, hangisinin büyütülebileceğini ve satış ekibinin kime odaklanması gerektiğini gösteririm.</p></div><div class="focus"><div class="n">04</div><h3 data-i18n="fo4t">Akademik yöntemle iş etkisi üretmek</h3><p data-i18n="fo4d">Modelin yalnızca sonuç vermesine değil, doğrulanabilir, açıklanabilir ve iş kararına dönüşebilir olmasına önem veririm.</p></div></div></div></section>
 <section id="work"><div class="wrap"><div class="sec-head"><span class="eyebrow" data-i18n="eb_work">Seçili Çalışmalar</span><h2 class="sec-title reveal" data-i18n="work_title">Veriden iş kararına</h2><p class="sec-sub reveal" data-i18n="work_sub">SQL ile veri mühendisliği, Python/R ile modelleme ve her projede ölçülebilir, yorumlanabilir bir iş çıktısı.</p></div>
-<div class="work-group reveal"><div class="group-eyebrow"><span class="gn">01</span><span data-i18n="g1">FMCG & Stok Optimizasyonu</span></div><div class="proj-grid"><div class="card featured"><div class="card-top"><div class="work-cat" data-i18n="b_feature">Öne çıkan proje</div><div class="metric"><div class="big">2022–26</div><div class="cap" data-i18n="m_cash">nakde dönüş odağı</div></div></div><h3 data-i18n="p_stock_t">Stokta Bağlı Nakdi Görünür Kılan Analitik Sistem</h3><p data-i18n="p_stock_d">Gerçek Logo ERP verisi üzerinde satış, stok, maliyet ve brüt kâr verisini birleştirerek ürün bazında stok yaşı, devir hızı, marj, satış hızı ve nakit bağlama riskini hesapladım. Amaç yalnızca “stok listesi” çıkarmak değil; depoda bekleyen, yavaş dönen veya ölü stoka yaklaşan ürünleri görünür kılıp kampanya, iskonto, alım durdurma, tedarikçi görüşmesi veya iade kararıyla stoktaki paranın yeniden işletme nakdine dönmesini sağlamaktır.</p><p class="plain" data-i18n="p_stock_plain">Hangi ürün para kazandırıyor, hangi ürün depoda nakdi bağlıyor ve hangi ürüne hemen aksiyon almak gerekiyor? Bu sistem bu soruları günlük/aylık olarak cevaplar.</p><div class="tags"><span class="tag">SQL</span><span class="tag">Logo ERP</span><span class="tag">Brüt Kâr</span><span class="tag">Ölü Stok</span><span class="tag">Stok Devir Hızı</span><span class="tag">ABC/XYZ</span></div></div>
-
-<div class="card featured report-card" id="stok-saglik-raporu">
-  <div class="card-top">
-    <div class="work-cat">Canlı Demo Rapor · PDF</div>
-    <div class="metric">
-      <div class="big">₺3.88M</div>
-      <div class="cap">stokta kilitli nakit</div>
-    </div>
-  </div>
-  <h3>Stok Sağlık Yönetici Raporu — Görüntülenebilir Demo</h3>
-  <p class="report-intro">CSV/ERP işlem verisinden otomatik üretilen bu yönetici raporu; son 30 gün ciroyu, brüt kâr marjını, sipariş önceliklerini, ölü stokta kilitli nakdi, düşük marjlı ürünleri ve yönetim aksiyon planını tek PDF çıktısında sunar. Rapor, Python/Pandas hesaplama katmanı ve Ollama ile yerel LLM yorum katmanı kullanılarak hazırlanmıştır.</p>
-
+<div class="work-group reveal"><div class="group-eyebrow"><span class="gn">01</span><span data-i18n="g1">FMCG & Stok Optimizasyonu</span></div><div class="proj-grid"><div class="card featured"><div class="card-top"><div class="work-cat" data-i18n="b_feature">Öne çıkan proje</div><div class="metric"><div class="big">2022–26</div><div class="cap" data-i18n="m_cash">nakde dönüş odağı</div></div></div><h3 data-i18n="p_stock_t">Stokta Bağlı Nakdi Görünür Kılan Analitik Sistem</h3><p data-i18n="p_stock_d">Gerçek Logo ERP verisi üzerinde satış, stok, maliyet ve brüt kâr verisini birleştirerek ürün bazında stok yaşı, devir hızı, marj, satış hızı ve nakit bağlama riskini hesapladım. Amaç yalnızca “stok listesi” çıkarmak değil; depoda bekleyen, yavaş dönen veya ölü stoka yaklaşan ürünleri görünür kılıp kampanya, iskonto, alım durdurma, tedarikçi görüşmesi veya iade kararıyla stoktaki paranın yeniden işletme nakdine dönmesini sağlamaktır.</p><p class="plain" data-i18n="p_stock_plain">Hangi ürün para kazandırıyor, hangi ürün depoda nakdi bağlıyor ve hangi ürüne hemen aksiyon almak gerekiyor? Bu sistem bu soruları günlük/aylık olarak cevaplar.</p><div class="tags"><span class="tag">SQL</span><span class="tag">Logo ERP</span><span class="tag">Brüt Kâr</span><span class="tag">Ölü Stok</span><span class="tag">Stok Devir Hızı</span><span class="tag">ABC/XYZ</span></div></div><div class="card"><div class="card-top"><div class="work-cat" data-i18n="b_fmcg">FMCG Analitiği</div><div class="metric"><div class="big">90 gün</div><div class="cap" data-i18n="m_forecast">ileri tahmin</div></div></div><h3 data-i18n="p_ts_t">Zaman Serisi & Stok Planlama</h3><p data-i18n="p_ts_d">731 günlük satış verisinin SQL ile zaman serisine dönüştürülmesi; hareketli ortalama modeli, 90 günlük tahmin, MAE tabanlı güvenlik stoğu ve kategori bazlı öngörülebilirlik analizi.</p><p class="plain" data-i18n="p_ts_plain">Basitçe: Ne kadar satacağını daha erken görüp ne eksik alım ne de gereksiz stok yapmaya çalışırım.</p><div class="tags"><span class="tag">Python</span><span class="tag">Zaman Serisi</span><span class="tag">Prophet</span><span class="tag">Güvenlik Stoğu</span></div></div><div class="card"><div class="card-top"><div class="work-cat" data-i18n="b_ai">Yerel YZ · Raporlama</div><div class="metric"><div class="big">7–8B</div><div class="cap" data-i18n="m_local">yerel & şeffaf</div></div></div><h3 data-i18n="p_llm_t">Yerel LLM Tabanlı Otomatik Raporlama</h3><p data-i18n="p_llm_d">Talep tahmini, stok optimizasyonu ve anomali tespiti gibi hesaplamalar SQL/Python ile deterministik çalışır; küçük bir yerel dil modeli çıktıları yöneticilerin anlayacağı dille özetler.</p><p class="plain" data-i18n="p_llm_plain">Basitçe: Sistem yalnızca tablo üretmez; yöneticinin o gün hangi aksiyonu alması gerektiğini anlaşılır şekilde raporlar.</p><div class="tags"><span class="tag">Ollama</span><span class="tag">Python · SQL</span><span class="tag">Otomatik Rapor</span><span class="tag">KOBİ</span></div></div></div><div class="report-demo reveal"><h4>Stok Sağlık Yönetici Raporu — Görüntülenebilir Demo</h4><p>CSV/ERP verisinden üretilen bu demo rapor; son 30 gün ciroyu, brüt kâr marjını, sipariş önceliklerini, ölü stokta kilitli nakdi, düşük marjlı ürünleri ve yönetim aksiyon planını tek PDF çıktısında toplar.</p>
   <div class="report-highlights">
     <div class="report-highlight"><div class="rk">Son 30 gün ciro</div><div class="rv">₺4.77M</div></div>
-    <div class="report-highlight"><div class="rk">Brüt kâr marjı</div><div class="rv">%7.5</div></div>
+    <div class="report-highlight"><div class="rk">Brüt marj</div><div class="rv">%7.5</div></div>
     <div class="report-highlight"><div class="rk">Sipariş adayı</div><div class="rv">7 ürün</div></div>
     <div class="report-highlight"><div class="rk">Kilitli nakit</div><div class="rv">₺3.88M</div></div>
   </div>
 
   <div class="pdf-embed">
-    <iframe src="assets/docs/stok_saglik_yonetici_raporu_demo.pdf#toolbar=1&navpanes=0" title="Stok Sağlık Yönetici Raporu PDF"></iframe>
+    <iframe src="stok_saglik_yonetici_raporu_demo.pdf#toolbar=1&navpanes=0" title="Stok Sağlık Yönetici Raporu PDF"></iframe>
   </div>
 
   <div class="report-actions">
-    <a class="btn btn-primary" href="assets/docs/stok_saglik_yonetici_raporu_demo.pdf" target="_blank" rel="noopener">Raporu yeni sekmede aç</a>
-    <a class="btn btn-ghost" href="assets/docs/stok_saglik_yonetici_raporu_demo.pdf" download>PDF olarak indir</a>
+    <a class="btn btn-primary" href="stok_saglik_yonetici_raporu_demo.pdf" target="_blank" rel="noopener">Raporu yeni sekmede aç</a>
+    <a class="btn btn-ghost" href="stok_saglik_yonetici_raporu_demo.pdf" download>PDF olarak indir</a>
   </div>
-  <p class="report-note">Not: Demo raporda firma verisi örnek portfolyo sunumu amacıyla kullanılmıştır. Canlı kurulumda rapor haftalık/aylık otomatik üretilecek şekilde yapılandırılabilir.</p>
-  <div class="tags"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">ReportLab</span><span class="tag">Ollama</span><span class="tag">Local LLM</span><span class="tag">PDF Raporlama</span></div>
-</div>
-
-<div class="card"><div class="card-top"><div class="work-cat" data-i18n="b_fmcg">FMCG Analitiği</div><div class="metric"><div class="big">90 gün</div><div class="cap" data-i18n="m_forecast">ileri tahmin</div></div></div><h3 data-i18n="p_ts_t">Zaman Serisi & Stok Planlama</h3><p data-i18n="p_ts_d">731 günlük satış verisinin SQL ile zaman serisine dönüştürülmesi; hareketli ortalama modeli, 90 günlük tahmin, MAE tabanlı güvenlik stoğu ve kategori bazlı öngörülebilirlik analizi.</p><p class="plain" data-i18n="p_ts_plain">Basitçe: Ne kadar satacağını daha erken görüp ne eksik alım ne de gereksiz stok yapmaya çalışırım.</p><div class="tags"><span class="tag">Python</span><span class="tag">Zaman Serisi</span><span class="tag">Prophet</span><span class="tag">Güvenlik Stoğu</span></div></div><div class="card"><div class="card-top"><div class="work-cat" data-i18n="b_ai">Yerel YZ · Raporlama</div><div class="metric"><div class="big">7–8B</div><div class="cap" data-i18n="m_local">yerel & şeffaf</div></div></div><h3 data-i18n="p_llm_t">Yerel LLM Tabanlı Otomatik Raporlama</h3><p data-i18n="p_llm_d">Talep tahmini, stok optimizasyonu ve anomali tespiti gibi hesaplamalar SQL/Python ile deterministik çalışır; küçük bir yerel dil modeli çıktıları yöneticilerin anlayacağı dille özetler.</p><p class="plain" data-i18n="p_llm_plain">Basitçe: Sistem yalnızca tablo üretmez; yöneticinin o gün hangi aksiyonu alması gerektiğini anlaşılır şekilde raporlar.</p><div class="tags"><span class="tag">Ollama</span><span class="tag">Python · SQL</span><span class="tag">Otomatik Rapor</span><span class="tag">KOBİ</span></div></div></div></div>
+  <p class="report-note">Not: Demo raporda firma verisi örnek portfolyo sunumu amacıyla kullanılmıştır. Canlı kurulumda raporlar firma verisine göre otomatik güncellenir.</p>
+</div></div></div>
 <div class="work-group reveal"><div class="group-eyebrow"><span class="gn">02</span><span data-i18n="g2">Müşteri ve Pazarlama Analitiği</span></div><div class="proj-grid"><div class="card"><div class="card-top"><div class="work-cat" data-i18n="b_customer">Müşteri Analitiği</div><div class="metric"><div class="big">0.98</div><div class="cap" data-i18n="m_risk">risk listesi</div></div></div><h3 data-i18n="p_churn_t">Müşteri Kayıp (Churn) Tahmini</h3><p data-i18n="p_churn_d">SQL ile müşteri bazlı özellik mühendisliği; Python ile EDA, istatistiksel testler ve modelleme. Optimized Gradient Boosting ile en riskli müşteri listesi ve değer segmentasyonu.</p><p class="plain" data-i18n="p_churn_plain">Basitçe: Müşteri tamamen kopmadan önce alarm üretir; satış ekibi kime arama yapacağını, kime teklif sunacağını ve kime özel kampanya açacağını bilir.</p><div class="tags"><span class="tag">SQL</span><span class="tag">Gradient Boosting</span><span class="tag">RFM</span><span class="tag">scikit-learn</span></div></div><div class="card"><div class="card-top"><div class="work-cat" data-i18n="b_customer">Müşteri Analitiği</div><div class="metric"><div class="big">24</div><div class="cap" data-i18n="m_cohort">kohort · LTV/CAC</div></div></div><h3 data-i18n="p_cohort_t">Kohort & Retention Analizi</h3><p data-i18n="p_cohort_d">T-SQL PIVOT ile 24 aylık kohort matrisi ve retention heatmap; kohort bazlı LTV, ANOVA ile mevsimsel karşılaştırma ve LTV temelli CAC senaryoları.</p><p class="plain" data-i18n="p_cohort_plain">Basitçe: Yeni gelen müşteriler gerçekten kalıyor mu, hangi ay gelen müşteri daha değerli, pazarlama harcaması kendini kaç ayda geri ödüyor? Bu soruları görünür yapar.</p><div class="tags"><span class="tag">SQL</span><span class="tag">Kohort</span><span class="tag">ANOVA</span><span class="tag">LTV/CAC</span></div></div><div class="card"><div class="card-top"><div class="work-cat" data-i18n="b_reco">Öneri Sistemi</div><div class="metric"><div class="big">17×</div><div class="cap" data-i18n="m_lift">maks. lift</div></div></div><h3 data-i18n="p_basket_t">Sepet Analizi & Cross-Sell</h3><p data-i18n="p_basket_d">Apriori ile birliktelik kuralları, support/confidence/lift/conviction metrikleri, network graph ve magnet ürünler; kategori bazlı öneri motoru ve A/B test tasarımı.</p><p class="plain" data-i18n="p_basket_plain">Basitçe: Bir ürünü alan müşteriye yanında ne satılabilir, saha satış hangi ürünü hangi müşteriyle eşleştirmeli, sepet değeri nasıl artırılır? Bu analiz satışın eline aksiyon listesi verir.</p><div class="tags"><span class="tag">Apriori</span><span class="tag">Market Basket</span><span class="tag">Cross-Sell</span><span class="tag">A/B Test</span></div></div></div></div>
 <div class="work-group reveal"><div class="group-eyebrow"><span class="gn">03</span><span data-i18n="g3">Tahminleme, Otomasyon & Yapay Zeka</span></div><div class="proj-grid"><div class="card"><div class="card-top"><div class="work-cat" data-i18n="b_ml">Makine Öğrenmesi</div><div class="metric"><div class="big">14+</div><div class="cap" data-i18n="m_models">model · Optuna</div></div></div><h3 data-i18n="p_wind_t">Rüzgâr Hızı Tahmini</h3><p data-i18n="p_wind_d">14'ten fazla model (RF, XGBoost, LightGBM, CatBoost, LSTM/GRU, stacking) Optuna ve TimeSeriesSplit ile sistematik olarak karşılaştırıldı. Problemi nowcast olarak yeniden çerçeveleyerek tahmin hatasını belirgin biçimde iyileştirdim.</p><p class="plain" data-i18n="p_wind_plain">Bu çalışma, zaman serisi problemlerinde yalnızca model seçmenin değil, problemi doğru çerçevelemenin de sonucu nasıl değiştirdiğini gösterdi.</p><div class="tags"><span class="tag">Python</span><span class="tag">Optuna</span><span class="tag">Stacking</span><span class="tag">Feature Eng.</span></div></div><div class="card"><div class="card-top"><div class="work-cat" data-i18n="b_auto">Otomasyon</div><div class="metric"><div class="big">n8n</div><div class="cap" data-i18n="m_pipeline">uçtan uca akış</div></div></div><h3 data-i18n="p_n8n_t">Sosyal Medya İçerik Üretim Otomasyonu</h3><p data-i18n="p_n8n_d">n8n üzerinde Apify ile Twitter verisini toplayıp Perplexity ile pazar araştırması yapan, çıktıyı ortak bir yapay zekâ motoruyla raporlayan ve erken trend analizi ile içerik fikirleri üreten uçtan uca otomasyon.</p><p class="plain" data-i18n="p_n8n_plain">Basitçe: Trendleri elle aramak yerine, sistem veriyi toplar, özetler ve içerik fikrine dönüştürür.</p><div class="tags"><span class="tag">n8n</span><span class="tag">Apify</span><span class="tag">Perplexity</span><span class="tag">LLM</span></div></div></div></div>
 <div class="work-group reveal" id="academic"><div class="group-eyebrow"><span class="gn">04</span><span data-i18n="g4">Akademik & Araştırma</span></div><div class="proj-grid"><div class="card"><div class="card-top"><div class="work-cat" data-i18n="b_econfin">Ekonometri & Finans</div><div class="metric"><div class="big">0.803</div><div class="cap" data-i18n="m_kmo">KMO · faktör analizi</div></div></div><h3 data-i18n="p_thesis_t">Kredi Kartı Temerrüt Riski</h3><p data-i18n="p_thesis_d">UCI Taiwan veri setindeki 29.655 gözlem üzerinden finansal davranış faktörlerinin kredi kartı temerrüt/gecikme riski üzerindeki etkisini inceledim. Faktör analizi, güvenilirlik analizi, ANOVA ve lojistik regresyon ile ödeme davranışı, limit kullanımı ve geçmiş gecikme göstergelerinin temerrüt üzerinde anlamlı etkiler taşıdığını ortaya koydum; ayrıca temerrüt riskini tahminlemeye yönelik modelleme çalışması yaptım.</p><div class="tags"><span class="tag">SPSS</span><span class="tag">Faktör Analizi</span><span class="tag">ANOVA</span><span class="tag">Lojistik Regresyon</span><span class="tag">Tahminleme</span></div></div><div class="card"><div class="card-top"><div class="work-cat" data-i18n="b_econ">Ekonometri</div><div class="metric"><div class="big">85</div><div class="cap" data-i18n="m_panel">ülke · panel veri</div></div></div><h3 data-i18n="p_co2_t">CO₂ Emisyonu Panel Veri Analizi</h3><p data-i18n="p_co2_d">85 ülke, 2002–2022 dönemi için R ile pooled OLS, sabit ve rassal etki modelleri; gelir grubu bazında Random Forest dâhil sınıflandırıcılarla karşılaştırma.</p><div class="tags"><span class="tag">R</span><span class="tag">Panel Data</span><span class="tag">Sabit/Rassal Etki</span><span class="tag">Random Forest</span></div></div><div class="card"><div class="card-top"><div class="work-cat" data-i18n="b_nlp">NLP</div><div class="metric"><div class="big">BIST100</div><div class="cap" data-i18n="m_sentiment">duygu analizi</div></div></div><h3 data-i18n="p_bist_t">BIST100 Duygu Analizi</h3><p data-i18n="p_bist_d">Finansal metin verisi üzerinden BIST100 odaklı duygu analizi araştırması; doğal dil işleme yöntemleriyle piyasa duyarlılığının ölçülmesi.</p><div class="tags"><span class="tag">Python</span><span class="tag">NLP</span><span class="tag">Sentiment</span><span class="tag">Finans</span></div></div><div class="card"><div class="card-top"><div class="work-cat" data-i18n="b_applied">Uygulamalı ML</div><div class="metric"><div class="big">+3</div><div class="cap" data-i18n="m_studies">çalışma</div></div></div><h3 data-i18n="p_applied_t">Diğer Uygulamalı Çalışmalar</h3><p data-i18n="p_applied_d">Beton basınç dayanımı tahmini, İGDAŞ veri analizi ve paralimpik yüzme üzerine sistematik kaynak taraması dâhil çeşitli uygulamalı analiz projeleri.</p><div class="tags"><span class="tag">Python</span><span class="tag">R</span><span class="tag">Regresyon</span><span class="tag">EDA</span></div></div></div></div></div></section>
 <section id="writing"><div class="wrap"><div class="sec-head"><span class="eyebrow" data-i18n="eb_writing">Yazılar</span><h2 class="sec-title reveal" data-i18n="writing_title">Medium'da veri bilimi yazılarım</h2><p class="sec-sub reveal" data-i18n="writing_sub">Gerçek sektör vakalarını uygulanabilir veri bilimi yöntemleriyle anlattığım yazılar.</p></div><div class="writing-list reveal"><a class="article" href="https://medium.com/@ikuyumcu72/python-ile-g%C4%B1da-sekt%C3%B6r%C3%BCnde-2025-sat%C4%B1%C5%9F-tahminleme-06c2b150162e" target="_blank" rel="noopener"><div class="art-date">12 Oca 2026<span class="rt" data-i18n="rt4">4 dk okuma</span></div><div><h3 data-i18n="a1_t">Python ile Gıda Sektöründe 2025 Satış Tahminleme</h3><p data-i18n="a1_d">Lineer regresyon ve NumPy polyfit ile aya özel trend modelleri; bir gıda firmasının yıllık satış ve ciro projeksiyonu, rolling forecast yaklaşımı ve reel büyüme yorumu.</p><div class="art-tags"><span class="tag">Python</span><span class="tag">Lineer Regresyon</span><span class="tag">Tahminleme</span></div></div><div class="read-arrow"><span data-i18n="read">Medium'da oku</span><span class="ar">→</span></div></a><a class="article" href="https://medium.com/@ikuyumcu72/sezgilerden-veriye-python-ile-4-y%C4%B1ll%C4%B1k-ramazan-sat%C4%B1%C5%9F-analizi-ve-2026-projeksiyonu-48d13067ecb4" target="_blank" rel="noopener"><div class="art-date">17 Oca 2026<span class="rt" data-i18n="rt4b">4 dk okuma</span></div><div><h3 data-i18n="a2_t">Sezgilerden Veriye: 4 Yıllık Ramazan Satış Analizi ve 2026 Projeksiyonu</h3><p data-i18n="a2_d">Vakaya özel geliştirdiğim bayram satış hızı artışı metriği, adet bazlı reel büyüme analizi ve modelin 2025 verisiyle backtest edilerek doğrulanması.</p><div class="art-tags"><span class="tag">Pandas</span><span class="tag">Backtesting</span><span class="tag">Mevsimsellik</span></div></div><div class="read-arrow"><span data-i18n="read">Medium'da oku</span><span class="ar">→</span></div></a><a class="article" href="https://medium.com/@ikuyumcu72/veri-analiti%C4%9Fi-ile-i%CC%87%C3%A7ecek-sekt%C3%B6r%C3%BCnde-tahminleme-sezgilerden-prophet-algoritmas%C4%B1na-ac5dcef0e810" target="_blank" rel="noopener"><div class="art-date">11 Şub 2026<span class="rt" data-i18n="rt3">3 dk okuma</span></div><div><h3 data-i18n="a3_t">Veri Analitiği ile İçecek Sektöründe Tahminleme: Sezgilerden Prophet Algoritmasına</h3><p data-i18n="a3_d">40'tan fazla Excel tablosunun Meta Prophet ile karar destek sistemine dönüştürülmesi; trend/mevsimsellik/tatil ayrıştırması ve satın alma optimizasyonu.</p><div class="art-tags"><span class="tag">Prophet</span><span class="tag">Zaman Serisi</span><span class="tag">Satın Alma</span></div></div><div class="read-arrow"><span data-i18n="read">Medium'da oku</span><span class="ar">→</span></div></a></div></div></section>
 <section id="principles"><div class="wrap"><div class="sec-head"><span class="eyebrow" data-i18n="eb_prin">Yaklaşım</span><h2 class="sec-title reveal" data-i18n="prin_title">Çalışma ilkelerim</h2></div><div class="prin-grid reveal"><div class="prin"><div class="n">01</div><h4 data-i18n="pr1t">Problemi veriden önce doğru tanımlamak</h4><p data-i18n="pr1d">Her projede önce iş sorusunu netleştiririm: stok mu kilitleniyor, müşteri mi uzaklaşıyor, marj mı eriyor, talep mi öngörülemiyor? Modeli ve raporu bu karar sorusuna göre tasarlarım.</p></div><div class="prin"><div class="n">02</div><h4 data-i18n="pr2t">Akademik titizlik & yorumlanabilirlik</h4><p data-i18n="pr2d">Her sonucu mümkün olduğunca istatistiksel testler, validasyon ve açıklanabilir metriklerle desteklerim. Amaç yalnızca tahmin değil, kararın nedenini açıklamaktır.</p></div><div class="prin"><div class="n">03</div><h4 data-i18n="pr3t">Model çıktısını aksiyona çevirmek</h4><p data-i18n="pr3d">Analizin değeri yalnızca grafikte değil, alınan kararda ortaya çıkar. Çıktıları satın alma, fiyatlama, kampanya, tahsilat, müşteri ziyareti veya stok azaltma gibi uygulanabilir aksiyonlara bağlarım.</p></div><div class="prin"><div class="n">04</div><h4 data-i18n="pr4t">Denetlenebilir ve sürdürülebilir sistem kurmak</h4><p data-i18n="pr4d">Kurulan yapıların tek seferlik analiz olarak kalmamasına dikkat ederim. SQL/Python tabanlı, tekrar çalıştırılabilir, metrikleri izlenebilir ve ekip tarafından devralınabilir sistemler tasarlarım.</p></div></div></div></section>
-
-<section id="certificates">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow">Belgeler & Sertifikalar</span>
-      <h2 class="sec-title reveal">Veri Analizi Okulu belgeleri</h2>
-      <p class="sec-sub reveal">Yükseköğretim Kurulu yürütücülüğünde; Marmara Üniversitesi koordinasyonunda, ODTÜ, İTÜ ve Boğaziçi Üniversitesi katkılarıyla düzenlenen Veri Analizi Okulu 2025–2026 programına ait başarı ve katılım belgeleri.</p>
-    </div>
-
-    <div class="cert-grid reveal">
-      <div class="cert-card">
-        <div class="cert-type">Başarı Belgesi</div>
-        <h3>Yapay Zekâ ve Kolaylaştırıcı Araçlar</h3>
-        <p>Modül sınavını başarıyla tamamlama belgesi. Yapay zekâ araçlarının veri analizi ve araştırma süreçlerinde kullanımı odağında yetkinlik gösterir.</p>
-        <div class="cert-meta"><span class="tag">YÖK</span><span class="tag">Veri Analizi Okulu</span><span class="tag">2025–2026</span></div>
-      </div>
-      <div class="cert-card">
-        <div class="cert-type">Başarı Belgesi</div>
-        <h3>Hesaplamalı Sosyal Bilimler</h3>
-        <p>Modül sınavını başarıyla tamamlama belgesi. Sosyal bilimlerde veri analizi, hesaplamalı yöntemler ve araştırma pratiğiyle ilişkilidir.</p>
-        <div class="cert-meta"><span class="tag">Hesaplamalı Sosyal Bilimler</span><span class="tag">Analitik Yöntemler</span></div>
-      </div>
-      <div class="cert-card">
-        <div class="cert-type">Katılım Belgesi</div>
-        <h3>Yapay Zekâ ve Kolaylaştırıcı Araçlar</h3>
-        <p>İlgili modüle düzenli katılım sağlayarak eğitim sürecini tamamlama belgesi.</p>
-        <div class="cert-meta"><span class="tag">Katılım</span><span class="tag">Yapay Zekâ</span></div>
-      </div>
-      <div class="cert-card">
-        <div class="cert-type">Katılım Belgesi</div>
-        <h3>Hesaplamalı Sosyal Bilimler</h3>
-        <p>Hesaplamalı Sosyal Bilimler modülüne düzenli katılım sağlayarak eğitim sürecini tamamlama belgesi.</p>
-        <div class="cert-meta"><span class="tag">Katılım</span><span class="tag">Sosyal Bilimler</span></div>
-      </div>
-    </div>
+<section id="certificates"><div class="wrap"><div class="sec-head"><span class="eyebrow" data-i18n="eb_certificates">Belgeler</span><h2 class="sec-title reveal" data-i18n="certificates_title">Belgeler & Sertifikalar</h2><p class="sec-sub reveal" data-i18n="certificates_sub">YÖK Veri Analizi Okulu kapsamında tamamlanan modüllere ait başarı ve katılım belgeleri.</p></div>
+  <div class="cert-grid">
+    <div class="cert-card reveal"><h3>Yapay Zekâ ve Kolaylaştırıcı Araçlar</h3><p>Veri Analizi Okulu 2025–2026 dönemi başarı ve katılım belgeleri.</p><div class="cert-meta"><span class="tag">YÖK</span><span class="tag">Başarı</span><span class="tag">Katılım</span></div></div>
+    <div class="cert-card reveal"><h3>Hesaplamalı Sosyal Bilimler</h3><p>Veri analizi, sosyal bilimlerde hesaplamalı yöntemler ve akademik araştırma süreci.</p><div class="cert-meta"><span class="tag">Marmara</span><span class="tag">ODTÜ</span><span class="tag">İTÜ</span><span class="tag">Boğaziçi</span></div></div>
+    <div class="cert-card reveal"><h3>Başarı Belgeleri</h3><p>Modül sınavını başarıyla tamamlama belgeleri.</p><div class="cert-meta"><span class="tag">Başarı</span><span class="tag">AI</span><span class="tag">Sosyal Bilimler</span></div></div>
+    <div class="cert-card reveal"><h3>Katılım Belgeleri</h3><p>Program modüllerine düzenli katılım ve eğitim sürecini tamamlama belgeleri.</p><div class="cert-meta"><span class="tag">Katılım</span><span class="tag">Sosyal Bilimler</span></div></div>
+  </div>
 
     <div class="cert-viewer reveal">
-      <iframe src="assets/docs/veri_analizi_okulu_belgeleri.pdf#toolbar=1&navpanes=0" title="Veri Analizi Okulu Belgeleri PDF"></iframe>
+      <iframe src="veri_analizi_okulu_belgeleri.pdf#toolbar=1&navpanes=0" title="Veri Analizi Okulu Belgeleri PDF"></iframe>
     </div>
     <div class="cert-actions reveal">
-      <a class="btn btn-primary" href="assets/docs/veri_analizi_okulu_belgeleri.pdf" target="_blank" rel="noopener">Belgeleri yeni sekmede aç</a>
-      <a class="btn btn-ghost" href="assets/docs/veri_analizi_okulu_belgeleri.pdf" download>PDF olarak indir</a>
+      <a class="btn btn-primary" href="veri_analizi_okulu_belgeleri.pdf" target="_blank" rel="noopener">Belgeleri yeni sekmede aç</a>
+      <a class="btn btn-ghost" href="veri_analizi_okulu_belgeleri.pdf" download>PDF olarak indir</a>
     </div>
     <p class="cert-note reveal">PDF içinde QR doğrulama alanları yer almaktadır. Belgeler tek PDF içinde dört sayfa olarak sunulmuştur.</p>
-  </div>
-</section>
-
+</div></section>
 <section id="expertise"><div class="wrap"><div class="sec-head"><span class="eyebrow" data-i18n="eb_stack">Uzmanlık</span><h2 class="sec-title reveal" data-i18n="stack_title">Araçlar ve yöntemler</h2></div><div class="exp-grid reveal"><div class="exp-col"><h4 data-i18n="sc1">Diller & Araçlar</h4><ul><li>Python</li><li>R</li><li>SQL (T-SQL)</li><li>SPSS</li><li>Excel</li><li>Power BI</li><li>Logo Enterprise (ERP)</li><li>DBeaver · Git</li></ul></div><div class="exp-col"><h4 data-i18n="sc2">Modelleme & İstatistik</h4><ul><li>scikit-learn · XGBoost · LightGBM · CatBoost</li><li>AutoGluon · Prophet · Optuna</li><li>Deep Learning (Keras · LSTM · GRU)</li><li>Stacking · Random Forest</li><li>Lojistik Regresyon · Faktör Analizi · ANOVA</li><li>Panel Data Ekonometri · BG/NBD</li></ul></div><div class="exp-col"><h4 data-i18n="sc3">Analitik & Otomasyon</h4><ul><li>Churn · RFM · Kohort · LTV</li><li>Sepet Analizi (Apriori)</li><li>Zaman Serisi · Tahminleme</li><li>Anomali Tespiti</li><li>Veri Görselleştirme (Power BI · Matplotlib)</li><li>n8n · Apify · Ollama (yerel LLM)</li></ul></div></div></div></section>
 <section id="contact"><div class="wrap"><div class="contact-box reveal"><span class="eyebrow" style="justify-content:center" data-i18n="eb_contact">İletişim</span><h2 style="margin-top:18px" data-i18n="c_title">Birlikte çalışalım</h2><p class="lede" data-i18n="c_sub">Stok optimizasyonu, tahminleme, müşteri analitiği, veri ürünü geliştirme veya akademik iş birliği üzerine konuşabiliriz.</p><div class="contact-links"><a class="clink" href="mailto:ikuyumcu72@gmail.com"><span class="pre">mail:</span> ikuyumcu72@gmail.com</a><a class="clink" href="https://www.linkedin.com/in/ibrahim-kuyumcu-3a71a0198" target="_blank" rel="noopener"><span class="pre">in/</span> ibrahim-kuyumcu</a><a class="clink" href="https://medium.com/@ikuyumcu72" target="_blank" rel="noopener"><span class="pre">medium/</span> @ikuyumcu72</a><a class="clink" href="https://github.com/ikuyumcu" target="_blank" rel="noopener"><span class="pre">gh/</span> ikuyumcu</a></div></div></div></section>
 <footer><div class="wrap foot-inner"><span>© 2026 İbrahim Kuyumcu · <span data-i18n="foot_loc">İstanbul, Türkiye</span></span><span data-i18n="foot_built">Veri bilimi · iş analitiği · akademik üretim</span></div></footer>
@@ -309,6 +230,7 @@ const T = {
     "nav_work": "Çalışmalar",
     "nav_writing": "Yazılar",
     "nav_principles": "Yaklaşım",
+    "nav_certificates": "Belgeler",
     "nav_expertise": "Uzmanlık",
     "nav_contact": "İletişim",
     "status": "Seçici veri analitiği projelerine ve akademik iş birliklerine açık",
@@ -386,10 +308,10 @@ const T = {
     "g4": "Akademik & Araştırma",
     "b_feature": "Öne çıkan proje",
     "b_fmcg": "FMCG Analitiği",
-    "b_ml": "Makine Öğrenmesi",
+    "b_ai": "Yerel YZ · Raporlama",
     "b_customer": "Müşteri Analitiği",
     "b_reco": "Öneri Sistemi",
-    "b_ai": "Yerel YZ · Raporlama",
+    "b_ml": "Makine Öğrenmesi",
     "b_auto": "Otomasyon",
     "b_econfin": "Ekonometri & Finans",
     "b_econ": "Ekonometri",
@@ -397,11 +319,11 @@ const T = {
     "b_applied": "Uygulamalı ML",
     "m_cash": "nakde dönüş odağı",
     "m_forecast": "ileri tahmin",
-    "m_models": "model · Optuna",
+    "m_local": "yerel & şeffaf",
     "m_risk": "risk listesi",
     "m_cohort": "kohort · LTV/CAC",
     "m_lift": "maks. lift",
-    "m_local": "yerel & şeffaf",
+    "m_models": "model · Optuna",
     "m_pipeline": "uçtan uca akış",
     "m_kmo": "KMO · faktör analizi",
     "m_panel": "ülke · panel veri",
@@ -413,6 +335,9 @@ const T = {
     "p_ts_t": "Zaman Serisi & Stok Planlama",
     "p_ts_d": "731 günlük satış verisinin SQL ile zaman serisine dönüştürülmesi; hareketli ortalama modeli, 90 günlük tahmin, MAE tabanlı güvenlik stoğu ve kategori bazlı öngörülebilirlik analizi.",
     "p_ts_plain": "Basitçe: Ne kadar satacağını daha erken görüp ne eksik alım ne de gereksiz stok yapmaya çalışırım.",
+    "p_llm_t": "Yerel LLM Tabanlı Otomatik Raporlama",
+    "p_llm_d": "Talep tahmini, stok optimizasyonu ve anomali tespiti gibi hesaplamalar SQL/Python ile deterministik çalışır; küçük bir yerel dil modeli çıktıları yöneticilerin anlayacağı dille özetler.",
+    "p_llm_plain": "Basitçe: Sistem yalnızca tablo üretmez; yöneticinin o gün hangi aksiyonu alması gerektiğini anlaşılır şekilde raporlar.",
     "p_churn_t": "Müşteri Kayıp (Churn) Tahmini",
     "p_churn_d": "SQL ile müşteri bazlı özellik mühendisliği; Python ile EDA, istatistiksel testler ve modelleme. Optimized Gradient Boosting ile en riskli müşteri listesi ve değer segmentasyonu.",
     "p_churn_plain": "Basitçe: Müşteri tamamen kopmadan önce alarm üretir; satış ekibi kime arama yapacağını, kime teklif sunacağını ve kime özel kampanya açacağını bilir.",
@@ -422,9 +347,6 @@ const T = {
     "p_basket_t": "Sepet Analizi & Cross-Sell",
     "p_basket_d": "Apriori ile birliktelik kuralları, support/confidence/lift/conviction metrikleri, network graph ve magnet ürünler; kategori bazlı öneri motoru ve A/B test tasarımı.",
     "p_basket_plain": "Basitçe: Bir ürünü alan müşteriye yanında ne satılabilir, saha satış hangi ürünü hangi müşteriyle eşleştirmeli, sepet değeri nasıl artırılır? Bu analiz satışın eline aksiyon listesi verir.",
-    "p_llm_t": "Yerel LLM Tabanlı Otomatik Raporlama",
-    "p_llm_d": "Talep tahmini, stok optimizasyonu ve anomali tespiti gibi hesaplamalar SQL/Python ile deterministik çalışır; küçük bir yerel dil modeli çıktıları yöneticilerin anlayacağı dille özetler.",
-    "p_llm_plain": "Basitçe: Sistem yalnızca tablo üretmez; yöneticinin o gün hangi aksiyonu alması gerektiğini anlaşılır şekilde raporlar.",
     "p_wind_t": "Rüzgâr Hızı Tahmini",
     "p_wind_d": "14'ten fazla model (RF, XGBoost, LightGBM, CatBoost, LSTM/GRU, stacking) Optuna ve TimeSeriesSplit ile sistematik olarak karşılaştırıldı. Problemi nowcast olarak yeniden çerçeveleyerek tahmin hatasını belirgin biçimde iyileştirdim.",
     "p_wind_plain": "Bu çalışma, zaman serisi problemlerinde yalnızca model seçmenin değil, problemi doğru çerçevelemenin de sonucu nasıl değiştirdiğini gösterdi.",
@@ -462,6 +384,9 @@ const T = {
     "pr3d": "Analizin değeri yalnızca grafikte değil, alınan kararda ortaya çıkar. Çıktıları satın alma, fiyatlama, kampanya, tahsilat, müşteri ziyareti veya stok azaltma gibi uygulanabilir aksiyonlara bağlarım.",
     "pr4t": "Denetlenebilir ve sürdürülebilir sistem kurmak",
     "pr4d": "Kurulan yapıların tek seferlik analiz olarak kalmamasına dikkat ederim. SQL/Python tabanlı, tekrar çalıştırılabilir, metrikleri izlenebilir ve ekip tarafından devralınabilir sistemler tasarlarım.",
+    "eb_certificates": "Belgeler",
+    "certificates_title": "Belgeler & Sertifikalar",
+    "certificates_sub": "YÖK Veri Analizi Okulu kapsamında tamamlanan modüllere ait başarı ve katılım belgeleri.",
     "eb_stack": "Uzmanlık",
     "stack_title": "Araçlar ve yöntemler",
     "sc1": "Diller & Araçlar",
@@ -478,186 +403,180 @@ const T = {
     "nav_work": "Work",
     "nav_writing": "Writing",
     "nav_principles": "Approach",
+    "nav_certificates": "Certificates",
     "nav_expertise": "Expertise",
     "nav_contact": "Contact",
-    "status": "Open to selective data analytics projects and academic collaborations",
+    "status": "Open to selected analytics projects and academic collaboration",
     "hero_name": "İbrahim Kuyumcu",
     "hero_role": "Data Scientist & Analytics Product Builder",
-    "hero_lede": "I am a data scientist and analytics product builder combining ten years of sector experience with the academic rigor of data science. With machine learning and statistical models, I turn raw business data into decision-support systems for inventory optimization, demand forecasting, customer analytics and operational efficiency.",
+    "hero_lede": "I combine ten years of business experience with the rigor of data science. Using machine learning and statistical models, I turn raw business data into decision-support systems for inventory optimization, demand forecasting, customer analytics and operational efficiency.",
     "hero_cta1": "View work",
     "hero_cta2": "Get in touch",
     "hero_cta3": "See academic work",
-    "hero_note": "My focus is not acting like an agency, but building measurable decision systems from real business data and contributing professionally to selected projects.",
     "panel_badge": "SAMPLE · DEMO PANEL",
-    "panel_label": "Realistic executive-screen example",
+    "panel_label": "Realistic executive view",
     "panel_title": "Distribution Company Decision Panel",
-    "panel_sub": "Stock, sales, profit and customer risks become readable on one screen.",
-    "panel_kpi1": "Dead-stock risk",
+    "panel_sub": "Inventory, sales, profit and customer risks become readable on one screen.",
+    "panel_kpi1": "Dead stock risk",
     "panel_kpi2": "Cash tied in stock",
     "panel_kpi3": "90-day demand",
     "panel_kpi4": "Churn alert",
     "panel_row1": "Slow-moving products",
     "panel_row2": "Negative-margin alerts",
-    "panel_row3": "Purchasing recommendation",
+    "panel_row3": "Purchase recommendation",
     "panel_row4": "At-risk customer list",
     "stat1": "Years of sector & business experience",
     "stat2": "End-to-end data science projects",
     "stat3": "Published Medium articles",
     "stat4": "Real ERP transaction data",
     "eb_journey": "Journey",
-    "journey_title": "A line from the field to data",
+    "journey_title": "A path from operations to data",
     "tl1y": "10+ years",
     "tl1t": "Business Analytics & Operations",
     "tl1d": "Decision-support reporting with sales, stock, customer and cost data; reading daily business problems through data.",
     "tl2y": "2020 — 2022",
     "tl2t": "Bitoptancı",
-    "tl2d": "Founding a B2B & B2C e-commerce venture that brought wholesale online; direct field experience with product, customer and order data.",
-    "tl3y": "2026 — present",
-    "tl3t": "MSc in Big Data",
-    "tl3d": "Big Data & Business Analytics master's at İbn Haldun University; YÖK Data Analytics School and academic research discipline.",
+    "tl2d": "Founded a B2B & B2C e-commerce initiative that moved wholesale distribution online; direct experience with product, customer and order data.",
+    "tl3y": "2026 — ongoing",
+    "tl3t": "Big Data MSc",
+    "tl3d": "MSc in Big Data & Business Analytics at Ibn Haldun University; YÖK Data Analysis School and academic research discipline.",
     "tl4y": "Today",
     "tl4t": "Professional & Academic Production",
-    "tl4d": "Inventory, forecasting and customer analytics systems for distribution companies; parallel academic studies and publishable projects.",
+    "tl4d": "Inventory, forecasting and customer analytics systems for distribution companies; academic studies and publishable projects in parallel.",
     "eb_about": "About",
     "about_title": "From field experience to academic data analytics",
-    "about_p1": "Across ten years of sector experience, I observed how operations, sales, inventory and customer data shape business decisions. I founded the e-commerce venture Bitoptancı; today I combine that practical background with data science.",
-    "about_p2": "I am pursuing a Big Data & Business Analytics master's at İbn Haldun University. I build my work beyond reporting: statistical validation, machine learning, time-series forecasting, customer analytics and interpretable decision-support systems.",
-    "about_p3": "I do not position myself as an agency, but as a professional who has experienced real business problems and focuses on solving them with data. I am open to selective consulting, project, academic collaboration and data-product opportunities.",
-    "f1k": "Master's",
+    "about_p1": "Since 2016, I have combined hands-on experience in trade, operations and distribution with data science. I experienced directly how sales, inventory, accounts, collections, product profitability and customer behavior affect business decisions.",
+    "about_p2": "I am pursuing an MSc in Big Data and Business Analytics at Ibn Haldun University. My academic work focuses on statistical modeling, machine learning, panel-data econometrics, time-series forecasting and customer analytics, linking these methods to real business problems.",
+    "about_p3": "My focus is not only reporting past performance, but building explainable and actionable decision-support systems that forecast how sales, inventory, customers and cash flow may behave in the future.",
+    "f1k": "MSc",
     "f1v": "Big Data & Business Analytics",
     "f2k": "University",
-    "f2v": "İbn Haldun University",
-    "f3k": "Bachelor's",
-    "f3v": "Istanbul Univ. — Public Relations",
-    "f4k": "Data Analytics School",
-    "f4v": "Computational Social Science & AI (YÖK)",
+    "f2v": "Ibn Haldun University",
+    "f3k": "BA",
+    "f3v": "Istanbul University — Public Relations",
+    "f4k": "Data Analysis School",
+    "f4v": "Computational Social Sciences & AI (YÖK)",
     "f5k": "Focus",
     "f5v": "FMCG, Inventory, Forecasting, Customer Analytics",
     "f6k": "Location",
     "f6v": "Istanbul, Türkiye",
     "eb_focus": "Focus",
-    "focus_title": "I build systems that help companies see their future earlier",
-    "focus_sub": "For me, analytics is not just reporting the past. The real value is forecasting how sales, inventory, customers and cash will behave, then making today's decision more accurately.",
+    "focus_title": "I build systems that help companies see the future earlier",
+    "focus_sub": "To me, analytics is not only about reporting the past. Its real value is forecasting how sales, stock, customers and cash may behave, so today's decision becomes better.",
     "fo1t": "Making cash tied in stock visible",
-    "fo1d": "I reveal which products make money, which lock cash in the warehouse and which require discount, campaign, return or supplier action.",
+    "fo1d": "I reveal which products generate profit, which lock cash in the warehouse, and which require discount, return or purchase-stop decisions.",
     "fo2t": "Forecasting demand and risk",
-    "fo2d": "Using sales history, seasonality and product behavior, I move purchasing and inventory decisions from intuition to data.",
-    "fo3t": "Seeing customer loss early",
-    "fo3d": "With churn, cohort and RFM analysis, I show which customers are drifting away, who can be grown and where sales teams should focus.",
-    "fo4t": "Business impact with academic method",
-    "fo4d": "I care that a model is validated, explainable and convertible into a business decision — not just that it produces an output.",
+    "fo2d": "Using sales history, seasonality and product behavior, I move purchasing and stock decisions from intuition to data.",
+    "fo3t": "Seeing customers before losing them",
+    "fo3d": "With churn, cohort and RFM analyses, I identify which customers are drifting away, which can grow, and whom the sales team should focus on.",
+    "fo4t": "Creating business impact with academic methods",
+    "fo4d": "I care not only about model output, but also about whether it is validated, explainable and convertible into business decisions.",
     "eb_work": "Selected Work",
-    "work_title": "From data to business decisions",
-    "work_sub": "SQL for data engineering, Python/R for modeling, and a measurable, interpretable business outcome in every project.",
+    "work_title": "From data to business decision",
+    "work_sub": "Data engineering with SQL, modeling with Python/R and a measurable, interpretable business output in every project.",
     "g1": "FMCG & Inventory Optimization",
-    "g2": "Customer and Marketing Analytics",
+    "g2": "Customer & Marketing Analytics",
     "g3": "Forecasting, Automation & AI",
     "g4": "Academic & Research",
     "b_feature": "Featured project",
     "b_fmcg": "FMCG Analytics",
-    "b_ml": "Machine Learning",
+    "b_ai": "Local AI · Reporting",
     "b_customer": "Customer Analytics",
     "b_reco": "Recommendation System",
-    "b_ai": "Local AI · Reporting",
+    "b_ml": "Machine Learning",
     "b_auto": "Automation",
     "b_econfin": "Econometrics & Finance",
     "b_econ": "Econometrics",
     "b_nlp": "NLP",
     "b_applied": "Applied ML",
-    "m_cash": "cash-recovery focus",
+    "m_cash": "cash-release focus",
     "m_forecast": "forward forecast",
-    "m_models": "models · Optuna",
+    "m_local": "local & transparent",
     "m_risk": "risk list",
     "m_cohort": "cohort · LTV/CAC",
-    "m_lift": "max lift",
-    "m_local": "local & transparent",
+    "m_lift": "max. lift",
+    "m_models": "models · Optuna",
     "m_pipeline": "end-to-end flow",
     "m_kmo": "KMO · factor analysis",
     "m_panel": "countries · panel data",
     "m_sentiment": "sentiment analysis",
     "m_studies": "studies",
-    "p_stock_t": "An Analytics System That Makes Cash Tied in Inventory Visible",
-    "p_stock_d": "On real Logo ERP data, I combined sales, stock, cost and gross-profit data to calculate product-level stock age, turnover, margin, sales velocity and cash-lock risk. The aim is not just producing a stock list, but making slow-moving or dead-stock products visible and turning warehouse value back into operating cash through campaign, discount, purchase stop, supplier negotiation or return decisions.",
-    "p_stock_plain": "In plain business terms: Which product makes money, which product ties up your cash in the warehouse, and which product requires immediate action? This system answers those questions daily or monthly.",
-    "p_ts_t": "Time Series & Stock Planning",
-    "p_ts_d": "Converting 731 days of sales into a time series in SQL; moving-average model, 90-day forecast, MAE-based safety stock and category-level predictability analysis.",
-    "p_ts_plain": "Simply: I help estimate what will sell so the company avoids both stockouts and unnecessary stock.",
+    "p_stock_t": "Analytics System for Making Cash Tied in Stock Visible",
+    "p_stock_d": "Using real Logo ERP data, I combined sales, stock, cost and gross-profit data to calculate stock age, turnover, margin, sales velocity and cash-lock risk at product level. The goal is not just to produce a stock list, but to make slow-moving and dead-stock candidates visible and turn warehouse cash back into business cash through campaign, discount, purchase-stop, supplier negotiation or return decisions.",
+    "p_stock_plain": "Which product generates profit, which one locks cash in the warehouse, and which one needs immediate action? This system answers these questions daily/monthly.",
+    "p_ts_t": "Time Series & Inventory Planning",
+    "p_ts_d": "Transforming 731 days of sales data into a SQL time series; moving-average model, 90-day forecast, MAE-based safety stock and category-level predictability analysis.",
+    "p_ts_plain": "In simple terms: I try to see what will sell earlier, preventing both under-purchasing and unnecessary stock.",
+    "p_llm_t": "Local LLM-Based Automated Reporting",
+    "p_llm_d": "Calculations such as demand forecasting, inventory optimization and anomaly detection run deterministically with SQL/Python; a small local language model summarizes the outputs in executive-friendly language.",
+    "p_llm_plain": "In simple terms: the system does not only produce tables; it reports which action management should take that day.",
     "p_churn_t": "Customer Churn Prediction",
-    "p_churn_d": "Customer-level feature engineering in SQL; EDA, statistical testing and modeling in Python. Optimized Gradient Boosting produces an at-risk customer list and value segmentation.",
-    "p_churn_plain": "Simply: It alerts before a customer fully leaves; sales teams know whom to call, whom to offer and whom to target with a campaign.",
+    "p_churn_d": "Customer-level feature engineering with SQL; EDA, statistical tests and modeling with Python. Optimized Gradient Boosting for the highest-risk customer list and value segmentation.",
+    "p_churn_plain": "In simple terms: it creates alerts before customers completely churn, helping sales know whom to call, whom to offer and whom to campaign for.",
     "p_cohort_t": "Cohort & Retention Analysis",
-    "p_cohort_d": "A 24-month cohort matrix and retention heatmap via T-SQL PIVOT; cohort-level LTV, seasonal comparison with ANOVA and LTV-based CAC scenarios.",
-    "p_cohort_plain": "Simply: Do new customers actually stay, which acquisition month is more valuable, and when does marketing spend pay back? This analysis makes those questions visible.",
-    "p_basket_t": "Market Basket & Cross-Sell",
-    "p_basket_d": "Association rules with Apriori, support/confidence/lift/conviction metrics, network graph, magnet products, category-level recommendation engine and A/B test design.",
-    "p_basket_plain": "Simply: What can be sold next to a product, which product should field sales match with which customer, and how can basket value increase? It gives sales an action list.",
-    "p_llm_t": "Local-LLM Automated Reporting",
-    "p_llm_d": "Calculations such as demand forecasting, inventory optimization and anomaly detection run deterministically in SQL/Python; a small local language model summarizes outputs in managerial language.",
-    "p_llm_plain": "Simply: The system does not only generate tables; it explains what action the manager should take today.",
+    "p_cohort_d": "24-month cohort matrix and retention heatmap with T-SQL PIVOT; cohort-based LTV, seasonal comparison with ANOVA and CAC scenarios based on LTV.",
+    "p_cohort_plain": "In simple terms: do new customers really stay, which acquisition month is more valuable, and how many months does marketing spend need to pay back?",
+    "p_basket_t": "Market Basket Analysis & Cross-Sell",
+    "p_basket_d": "Association rules with Apriori; support/confidence/lift/conviction metrics, network graph and magnet products; category-based recommendation engine and A/B test design.",
+    "p_basket_plain": "In simple terms: what can be sold together, which products should field sales match with customers, and how can basket value increase?",
     "p_wind_t": "Wind Speed Forecasting",
-    "p_wind_d": "Over 14 models (RF, XGBoost, LightGBM, CatBoost, LSTM/GRU, stacking) were compared with Optuna and TimeSeriesSplit. Reframing the task as nowcasting markedly improved forecast error.",
-    "p_wind_plain": "This study showed that in time-series problems, framing the problem correctly can matter as much as choosing the model.",
+    "p_wind_d": "More than 14 models (RF, XGBoost, LightGBM, CatBoost, LSTM/GRU, stacking) were systematically compared with Optuna and TimeSeriesSplit. By reframing the problem as nowcasting, I significantly improved forecast error.",
+    "p_wind_plain": "This study showed that in time-series problems, not only model selection but also framing the problem correctly can change the result.",
     "p_n8n_t": "Social Media Content Automation",
-    "p_n8n_d": "An end-to-end n8n workflow collecting Twitter data via Apify, running market research with Perplexity, reporting outputs through a shared AI engine and producing trend-based content ideas.",
-    "p_n8n_plain": "Simply: Instead of manually searching trends, the system collects, summarizes and turns data into content ideas.",
-    "p_thesis_t": "Credit-Card Default Risk",
-    "p_thesis_d": "The effect of financial behavioral factors on default risk (UCI Taiwan, 29,655 observations). Exploratory factor analysis, Cronbach's Alpha, ANOVA and logistic regression in SPSS; focused on interpretation rather than prediction.",
-    "p_co2_t": "CO₂ Emissions Panel-Data Analysis",
-    "p_co2_d": "Pooled OLS, fixed- and random-effects models in R for 85 countries over 2002–2022; comparison with classifiers including Random Forest by income group.",
+    "p_n8n_d": "An end-to-end automation on n8n that collects Twitter data with Apify, conducts market research with Perplexity, reports the output with a shared AI engine and generates content ideas through early trend analysis.",
+    "p_n8n_plain": "In simple terms: instead of searching trends manually, the system collects data, summarizes it and turns it into content ideas.",
+    "p_thesis_t": "Credit Card Default Risk",
+    "p_thesis_d": "Using 29,655 observations from the UCI Taiwan dataset, I examined how financial behavior factors affect credit card default/delay risk. Through factor analysis, reliability analysis, ANOVA and logistic regression, I found meaningful effects of payment behavior, limit utilization and past delay indicators on default, and also built a predictive modeling study for default risk.",
+    "p_co2_t": "CO₂ Emissions Panel Data Analysis",
+    "p_co2_d": "Pooled OLS, fixed and random effects models in R for 85 countries, 2002–2022; comparison with classifiers including Random Forest by income group.",
     "p_bist_t": "BIST100 Sentiment Analysis",
-    "p_bist_d": "A BIST100-focused sentiment analysis study on financial text data; measuring market sentiment with natural language processing methods.",
+    "p_bist_d": "A sentiment-analysis study focused on BIST100 using financial text data; measuring market sentiment with NLP methods.",
     "p_applied_t": "Other Applied Studies",
-    "p_applied_d": "Various applied analysis projects including concrete compressive-strength prediction, İGDAŞ data analysis and a systematic literature review on paralympic swimming.",
+    "p_applied_d": "Various applied analytics projects including concrete compressive-strength prediction, İGDAŞ data analysis and a systematic literature review on paralympic swimming.",
     "eb_writing": "Writing",
     "writing_title": "My data science articles on Medium",
-    "writing_sub": "Articles where I explain real sector cases with applicable data science methods.",
+    "writing_sub": "Articles where I explain real sector cases through applicable data science methods.",
     "rt4": "4 min read",
     "rt4b": "4 min read",
     "rt3": "3 min read",
     "read": "Read on Medium",
-    "a1_t": "Sales Forecasting in the Food Sector with Python (2025)",
-    "a1_d": "Month-specific trend models with linear regression and NumPy polyfit; annual sales and revenue projection, rolling forecast and real-growth interpretation.",
-    "a2_t": "From Intuition to Data: 4 Years of Ramadan Sales Analysis and a 2026 Projection",
-    "a2_d": "A custom holiday sales velocity metric, unit-based real-growth analysis and validating the model with 2025 backtesting.",
-    "a3_t": "Forecasting in the Beverage Sector: From Intuition to the Prophet Algorithm",
-    "a3_d": "Turning 40-plus Excel sheets into a decision-support system with Meta Prophet; trend/seasonality/holiday decomposition and purchasing optimization.",
+    "a1_t": "2025 Sales Forecasting in the Food Sector with Python",
+    "a1_d": "Month-specific trend models with linear regression and NumPy polyfit; annual sales and revenue projection for a food company, rolling forecast approach and real-growth interpretation.",
+    "a2_t": "From Intuition to Data: 4-Year Ramadan Sales Analysis and 2026 Projection",
+    "a2_d": "A custom Eid sales-velocity increase metric, quantity-based real-growth analysis and validation of the model through 2025 backtesting.",
+    "a3_t": "Forecasting in the Beverage Sector with Data Analytics: From Intuition to Prophet",
+    "a3_d": "Transforming 40+ Excel tables into a decision-support system with Meta Prophet; trend/seasonality/holiday decomposition and purchasing optimization.",
     "eb_prin": "Approach",
-    "prin_title": "How I work",
-    "pr1t": "First-person, real business problem",
-    "pr1d": "I explain my work not through abstract agency language, but through operations, inventory, sales and customer problems I have actually experienced.",
+    "prin_title": "My working principles",
+    "pr1t": "Define the problem before the data",
+    "pr1d": "In every project I first clarify the business question: is stock locking cash, are customers drifting away, are margins eroding, or is demand unpredictable? I design the model and report around this decision question.",
     "pr2t": "Academic rigor & interpretability",
-    "pr2d": "I support results with statistical tests, validation and explainable metrics whenever possible. The goal is not only prediction, but explaining the decision.",
+    "pr2d": "I support results as much as possible with statistical tests, validation and explainable metrics. The goal is not only prediction, but explaining the reason behind the decision.",
     "pr3t": "Turn model output into action",
-    "pr3d": "Every analysis ties to a concrete output: releasing cash tied in stock, lowering cost, retaining customers or directing sales more efficiently.",
+    "pr3d": "The value of analysis lies not only in the graph, but in the decision taken. I connect outputs to actionable steps such as purchasing, pricing, campaigns, collections, customer visits or stock reduction.",
     "pr4t": "Build auditable and sustainable systems",
-    "pr4d": "Computation runs in SQL/Python; the language model only narrates. Systems should be repeatable, auditable and improvable.",
+    "pr4d": "I ensure structures do not remain one-off analyses. I design SQL/Python-based systems that are repeatable, monitorable and transferable to teams.",
+    "eb_certificates": "Certificates",
+    "certificates_title": "Certificates & Documents",
+    "certificates_sub": "Achievement and participation documents from YÖK Data Analysis School modules.",
     "eb_stack": "Expertise",
-    "stack_title": "Tools & methods",
+    "stack_title": "Tools and methods",
     "sc1": "Languages & Tools",
     "sc2": "Modeling & Statistics",
     "sc3": "Analytics & Automation",
     "eb_contact": "Contact",
-    "c_title": "Let’s work together",
-    "c_sub": "We can talk about inventory optimization, forecasting, customer analytics, data-product development or academic collaboration.",
+    "c_title": "Let's work together",
+    "c_sub": "We can talk about inventory optimization, forecasting, customer analytics, analytics product development or academic collaboration.",
     "foot_loc": "Istanbul, Türkiye",
-    "foot_built": "Data science · business analytics · academic production"
+    "foot_built": "Data science · business analytics · academic work"
   }
 };
-let lang = "tr";
-function applyLang(){
-  document.documentElement.lang = lang;
-  document.querySelectorAll("[data-i18n]").forEach(el=>{
-    const k = el.getAttribute("data-i18n");
-    if(T[lang] && T[lang][k] !== undefined) el.textContent = T[lang][k];
-  });
-  document.getElementById("langBtn").textContent = lang === "tr" ? "EN" : "TR";
-}
-document.getElementById("langBtn").addEventListener("click",()=>{lang = lang === "tr" ? "en" : "tr"; applyLang();});
-document.getElementById("navToggle").addEventListener("click",()=>{document.getElementById("navLinks").classList.toggle("open");});
-document.querySelectorAll(".nav-links a").forEach(a=>a.addEventListener("click",()=>{document.getElementById("navLinks").classList.remove("open");}));
-const io = new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}});},{threshold:.1});
-document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
-applyLang();
+let lang = localStorage.getItem('lang') || 'tr';
+const btn = document.getElementById('langBtn');
+function applyLang(){document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.dataset.i18n;if(T[lang]&&T[lang][k]) el.textContent=T[lang][k]});btn.textContent=lang==='tr'?'EN':'TR';document.documentElement.lang=lang}
+btn.addEventListener('click',()=>{lang=lang==='tr'?'en':'tr';localStorage.setItem('lang',lang);applyLang()});applyLang();
+const toggle=document.getElementById('navToggle');const navLinks=document.getElementById('navLinks');toggle.addEventListener('click',()=>navLinks.classList.toggle('open'));navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('open')));
+const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 </script>
 </body>
 </html>
