@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ikuyumcu.github.io/ibrahimkuyumcu/sitemap.xml
